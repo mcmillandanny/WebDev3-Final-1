@@ -74,10 +74,16 @@ table {
 
 body {
 	background: #fff;
+	font-family: 'Arvo', 'arial', serif;
 }
 
 h1 {
 	font-size: 2.5rem;
+}
+
+a {
+	text-decoration: none;
+	color: white;
 }
 
 /* 2. Content ================================= */
@@ -87,7 +93,7 @@ h1 {
 	flex-direction: column;
 	justify-content: space-around;
 	background: black;
-	height: 70px;
+	height: 120px;
 }
 
 .header h1 {
@@ -95,9 +101,20 @@ h1 {
 	border-left: 1px solid orange;
 	color: red;
 	padding-right: 20px;
-	padding-left: 10px;
+	padding-left: 20px;
 	padding-top: 15px;
 	margin: auto;
+	margin-bottom: 25px;
+}
+
+.header span {
+	color: white;
+}
+
+.header a:hover {
+	border-bottom: orange 1px solid;
+	transition: .3s;
+	padding-bottom: 9px;
 }
 
 .header ul {
@@ -105,8 +122,106 @@ h1 {
 }
 
 .header li {
-	padding: 10px;
 	margin: auto;
+	padding-left: 5px;
+	margin-bottom: 10px;
+}
+
+.hero {
+	background-image: url("/src/img/bg-index.jpg");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	max-width: 100%;
+	min-width: 300px;
+	height: 480px;
+}
+
+.hero .hero-statement {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero .hero-statement h1, .hero .hero-statement p {
+	color: white;
+	text-align: center;
+	padding: 50px;
+	font-size: 2rem;
+}
+
+.hero .hero-statement p {
+	margin-top: -100px;
+	color: red;
+	font-size: 60px;
+}
+
+.about-me {
+	background: white;
+	display: flex;
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 120px;
+}
+
+.about-me h2 {
+	font-size: 1.4rem;
+	text-align: center;
+	padding: 10px;
+}
+
+.about-me p {
+	text-align: center;
+	padding: 10px;
+}
+
+.about-me a {
+	color: black;
+	border-bottom: 1px orange solid;
+}
+
+.space-stuff h2 {
+	font-size: 1.5rem;
+	text-align: center;
+	background: black;
+	color: white;
+	padding: 20px;
+	border-bottom: 1px orange solid;
+	border-top: 1px orange solid;
+}
+
+.space-stuff span {
+	font-weight: bold;
+}
+
+.space-stuff ul {
+	display: flex;
+	justify-content: center;
+}
+
+.space-stuff li {
+	padding: 20px;
+}
+
+.space-stuff p {
+	text-align: center;
+}
+
+.space-stuff .nasa-link {
+	color: red;
+	font-size: 1rem;
+	margin-top: 10px;
+}
+
+.space-facts {
+	margin-left: 10px;
+}
+
+.space-facts .fun-facts {
+	display: flex;
+}
+
+.space-facts h3 {
+	width: 100%;
+	text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
