@@ -39,6 +39,10 @@ a {
 	color: white;
 }
 
+a.active {
+	opacity: .4;
+}
+
 
 
 /* 3. INDEX MOBILE  ================================= */
@@ -62,38 +66,50 @@ a {
 		margin-bottom: 25px;
 	}
 
+	a {
+		color: black;
+	}
+
+	li:hover {
+		background: orange;
+		padding: 5px;
+		border-radius: 10px;
+	}
+
+
 	span {
 		color: white;
 	}
 
-	a:hover {
-		border-bottom: orange 1px solid;
-		transition: .3s;
-		padding-bottom: 9px;
-	}
-
-
 	ul  { 
 		display: flex;
+		background: white;
+		padding: 5px;
 
 	}
 
 	li {
-		margin: auto; 
-		padding-left: 5px;
-		margin-bottom: 10px;
+		margin: auto;
+		margin-bottom: 5px;
+		margin-top: 5px;
+		border-left: 1px orange solid;	
+		border-right: 1px orange solid;
+		padding: 0 5px;
+		padding: 5px;
+		border-radius: 10px;
+		background: transparent;
 	}
 
 }
 
 
 .hero {
-	background-image: url("/src/img/bg-index.jpg");
+	background-image: url("/dist/img/bg-index.jpg");
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	max-width: 100%;
     min-width: 300px;
-    height: 480px;
+    // height: 480px;
 
     .hero-statement {
     	background-color: rgba(0, 0, 0, 0.6);
@@ -157,7 +173,6 @@ a {
 	span {
 		font-weight: bold;
 	}
-
 	ul {
 		display: flex;
 		justify-content: center;	}
@@ -221,7 +236,102 @@ footer {
 	}
 }
 
-/* 3. INDEX TABLET  ================================= */
+/* 3. RESOURCE PAGE  ================================= */
+
+.resource-hero {
+	background-image: url("/dist/img/bg-resource.jpg");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	max-width: 100%;
+    min-width: 300px;
+    height: 400px;
+
+    h1 {
+    	text-align: center;
+    	padding-top: 30px;
+    }
+
+
+}
+
+
+
+.image-box {
+
+	h2 {
+		text-align: center;
+		padding: 10px;
+		border-bottom: 1px orange solid;
+	}
+
+
+	  img {
+    	min-width: 400px;
+    	max-width: 400px;
+    }
+
+    p {
+    	text-align: center;
+    	margin: 10px;
+    }
+}
+
+
+
+.text-editor-wrapper {
+
+
+	h2 {
+		text-align: left;
+		color: white;
+		background: black;
+		padding: 10px;
+		border-bottom: 1px solid red;
+	}
+
+	.open-btn {
+		background: none;
+		color: white;
+		outline: none;
+		// border: none;
+
+	}
+
+	
+}
+
+	.text-editors-menu.closed {
+		display: none;
+			
+	}
+
+	a {
+		color: black;
+	}
+
+	.text-editors-menu {
+		text-align: center;
+		font-size: 2rem;
+		display: block;
+		animation: menu2 1s linear infinite slidein;
+	}
+
+
+@keyframes menu2 {
+	from {
+		opacity: .6;
+	}
+
+	to {
+		opacity: .9;
+	}
+}
+
+
+
+
+
+/* 4. WORK PAGE  ================================= */
 
 
 

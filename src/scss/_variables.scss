@@ -1,6 +1,24 @@
 
-
 $primary-color: #fff;
-
-
 $h1-size: 2.5rem;
+
+$bp-tablet: 768px;
+$desktop-bp: 960px;
+
+
+@mixin bp-tablet {
+
+	@media only screen and (min-width: $tablet-bp) {
+		@content;
+		}
+
+}
+
+@mixin desktop-bp {
+		@media only screen and (min-width: $desktop-bp) {
+		@content;
+		}
+}
+
+
+

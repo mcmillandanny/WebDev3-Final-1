@@ -86,6 +86,10 @@ a {
 	color: white;
 }
 
+a.active {
+	opacity: .4;
+}
+
 /* 3. INDEX MOBILE  ================================= */
 .header {
 	display: flex;
@@ -106,33 +110,44 @@ a {
 	margin-bottom: 25px;
 }
 
+.header a {
+	color: black;
+}
+
+.header li:hover {
+	background: orange;
+	padding: 5px;
+	border-radius: 10px;
+}
+
 .header span {
 	color: white;
 }
 
-.header a:hover {
-	border-bottom: orange 1px solid;
-	transition: .3s;
-	padding-bottom: 9px;
-}
-
 .header ul {
 	display: flex;
+	background: white;
+	padding: 5px;
 }
 
 .header li {
 	margin: auto;
-	padding-left: 5px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	border-left: 1px orange solid;
+	border-right: 1px orange solid;
+	padding: 0 5px;
+	padding: 5px;
+	border-radius: 10px;
+	background: transparent;
 }
 
 .hero {
-	background-image: url("/src/img/bg-index.jpg");
+	background-image: url("/dist/img/bg-index.jpg");
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	max-width: 100%;
 	min-width: 300px;
-	height: 480px;
 }
 
 .hero .hero-statement {
@@ -244,6 +259,75 @@ footer p {
 	margin-top: 10px;
 }
 
-/* 3. INDEX TABLET  ================================= */
+/* 3. RESOURCE PAGE  ================================= */
+.resource-hero {
+	background-image: url("/dist/img/bg-resource.jpg");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	max-width: 100%;
+	min-width: 300px;
+	height: 400px;
+}
+
+.resource-hero h1 {
+	text-align: center;
+	padding-top: 30px;
+}
+
+.image-box h2 {
+	text-align: center;
+	padding: 10px;
+	border-bottom: 1px orange solid;
+}
+
+.image-box img {
+	min-width: 400px;
+	max-width: 400px;
+}
+
+.image-box p {
+	text-align: center;
+	margin: 10px;
+}
+
+.text-editor-wrapper h2 {
+	text-align: left;
+	color: white;
+	background: black;
+	padding: 10px;
+	border-bottom: 1px solid red;
+}
+
+.text-editor-wrapper .open-btn {
+	background: none;
+	color: white;
+	outline: none;
+}
+
+.text-editors-menu.closed {
+	display: none;
+}
+
+a {
+	color: black;
+}
+
+.text-editors-menu {
+	text-align: center;
+	font-size: 2rem;
+	display: block;
+	animation: menu2 1s linear infinite slidein;
+}
+
+@keyframes menu2 {
+	from {
+		opacity: .6;
+	}
+	to {
+		opacity: .9;
+	}
+}
+
+/* 4. WORK PAGE  ================================= */
 
 /*# sourceMappingURL=main.css.map */

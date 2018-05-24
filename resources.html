@@ -3,16 +3,16 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Index Page</title>
+        <title>Resources Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet">
         <link rel="stylesheet" href="dist/css/main.css">
         
     </head>
-    <body class="resources-page">
+    <body>
     <div class="wrapper">
-        <header>
+        <header class="header">
             <h1>Web<span>Dev1</span></h1>
             <nav>
                 <ul>
@@ -24,7 +24,7 @@
             </nav>
         </header>
 
-        <section class="hero">
+        <section class="resource-hero">
             <div class="hero-statement">
                 <h1>
                     Resources
@@ -33,49 +33,53 @@
         </section>
 
         <div class="image-box">
-            <h2>Html and CSS: Design and Build Websites</h2>
+            <h2>Mozzilla Developer Network</h2>
+            <img src="/dist/img/mdn-splash.png">
             <p class="image-box-description">
-               This was a very resourceful book, and I look forward to referencing it later on.
+               One of the best sites for Developers. The amount of times it has helped me out is countless.
             </p>
         </div>
         <aside>
-        <div class="markup-box first">
-            <h2>Text Editors</h2>
-            <p class="markup-box-links">
-                <a class="markup-box-links" href="https://panic.com/coda/" target="_blank">Coda</a>
+        <div class="text-editor-wrapper">
+            <h2>Text Editors
+                <button class="btn">+</button></h2>
+        <div class="text-editors-menu">
+            <p class="text-editors">
+                <a href="https://panic.com/coda/" target="_blank">Coda</a>
             </p>
 
-            <p class="markup-box-links description">
+            <p class="text-editors">
                 Industry favorite for the Mac.
             </p>
 
-            <p class="markup-box-links">
-                <a class="markup-box-links" href="https://www.barebones.com/products/textwrangler/" target="_blank">Text Wrangler</a>
+            <p class="text-editors">
+                <a class="text-editors-links" href="https://www.barebones.com/products/textwrangler/" target="_blank">Text Wrangler</a>
             </p>
-            <p class="markup-box-links description">
+            <p class="text-editors">
                 Free text editor for Mac.
             </p>
 
-            <p class="markup-box-links">
-                <a class="markup-box-links" href="https://notepad-plus-plus.org" target="_blank">Notepad++</a>
+            <p class="text-editors>
+                <a class="text-editors-links" href="https://notepad-plus-plus.org" target="_blank">Notepad++</a>
             </p>
-            <p class="markup-box-links description">
+            <p class="text-editors">
                 PC text editor. Free.
             </p>
 
-            <p class="markup-box-links">
-                <a class="markup-box-links" href="https://www.sublimetext.com" target="_blank">Sublime Text 2</a>
+            <p class="text-editors">
+                <a class="text-editors-links" href="https://www.sublimetext.com" target="_blank">Sublime Text 2</a>
             </p>
-            <p class="markup-box-links description">
+            <p class="text-editors">
                 PC and Mac. Quickly becoming a favorite in the industry.
             </p>
 
-            <p class="markup-box-links">
-                <a class="markup-box-links" href="https://stock.adobe.com/promo/firstmonthfree?as_channel=sem&as_campclass=nonbrand&as_campaign=US%7CCPRO%7CStock%7CAWAR%7CRLSA-Paid_CC%7CGG%7C%7C&as_source=google&mv=search&as_camptype=acquisition&sdid=12B9F15N&s_kwcid=AL!3085!3!199899790536!e!!g!!dreamweaver&ef_id=WMWd7wAAAPiKgFur:20171210033317:s" target="_blank">DreamWeaver</a>
+            <p class="text-editors-links">
+                <a class="text-editors-links" href="https://stock.adobe.com/promo/firstmonthfree?as_channel=sem&as_campclass=nonbrand&as_campaign=US%7CCPRO%7CStock%7CAWAR%7CRLSA-Paid_CC%7CGG%7C%7C&as_source=google&mv=search&as_camptype=acquisition&sdid=12B9F15N&s_kwcid=AL!3085!3!199899790536!e!!g!!dreamweaver&ef_id=WMWd7wAAAPiKgFur:20171210033317:s" target="_blank">DreamWeaver</a>
             </p>
-            <p class="markup-box-links description last">
+            <p class="text-editors">
                Part of the Adobe Creative Suite.
             </p>
+            </div>
         </div>
     </aside>
 
@@ -87,7 +91,7 @@
                     <a class="markup-box-links" href="#" target="_blank">Eric Myer's CSS reset</a>
                 </p>
 
-                <p class="markup-box-links description">
+                <p class="markup-box">
                    The standard way to start you style sheets.
                 </p>
 
@@ -194,6 +198,8 @@
             </p>
         </footer>
     </div>  <!-- END OF CONTENT -->
+
+    <script src="dist/js/main.js"></script>
 </body>
 
 </html>
