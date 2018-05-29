@@ -290,7 +290,7 @@ footer p {
 	margin: 10px;
 }
 
-.text-editor-wrapper h2 {
+h2 {
 	text-align: left;
 	color: white;
 	background: black;
@@ -298,7 +298,7 @@ footer p {
 	border-bottom: 1px solid red;
 }
 
-.text-editor-wrapper .open-btn {
+.btn {
 	background: none;
 	color: white;
 	outline: none;
@@ -308,23 +308,32 @@ footer p {
 	display: none;
 }
 
-a {
+.text-editors-menu {
+	text-align: center;
+	font-size: 1.5rem;
+	display: block;
+	background: red;
+	transition: all 2s ease;
+	height: 100%;
+	width: 100%;
+	padding: 20px;
+	animation: ani-menu 2s linear infinite;
+}
+
+.text-editors-menu p {
+	padding: 10px;
+}
+
+.text-editors-menu a {
 	color: black;
 }
 
-.text-editors-menu {
-	text-align: center;
-	font-size: 2rem;
-	display: block;
-	animation: menu2 1s linear infinite slidein;
-}
-
-@keyframes menu2 {
+@keyframes ani-menu {
 	from {
-		opacity: .6;
+		transform: translateY(100px);
 	}
 	to {
-		opacity: .9;
+		transform: translateY(0px);
 	}
 }
 

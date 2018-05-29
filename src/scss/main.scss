@@ -278,8 +278,6 @@ footer {
 
 
 
-.text-editor-wrapper {
-
 
 	h2 {
 		text-align: left;
@@ -289,7 +287,7 @@ footer {
 		border-bottom: 1px solid red;
 	}
 
-	.open-btn {
+	.btn {
 		background: none;
 		color: white;
 		outline: none;
@@ -298,34 +296,47 @@ footer {
 	}
 
 	
-}
 
 	.text-editors-menu.closed {
 		display: none;
 			
 	}
 
-	a {
-		color: black;
-	}
+	
 
 	.text-editors-menu {
 		text-align: center;
-		font-size: 2rem;
+		font-size: 1.5rem;
 		display: block;
-		animation: menu2 1s linear infinite slidein;
+		background: red;
+		transition: all 2s ease;
+		height: 100%;
+		width: 100%;
+		padding: 20px;
+		animation: ani-menu 2s linear infinite;
+
+		p {
+			padding: 10px;
+		}
+
+		a {
+		color: black;
+	}
+	
 	}
 
 
-@keyframes menu2 {
-	from {
-		opacity: .6;
+	@keyframes ani-menu {
+		from {
+			transform: translateY(100px);
+		}
+
+		to {
+			transform: translateY(0px);	
+		}
 	}
 
-	to {
-		opacity: .9;
-	}
-}
+
 
 
 
