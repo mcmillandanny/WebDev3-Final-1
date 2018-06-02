@@ -1,21 +1,22 @@
 
 $primary-color: #fff;
+$secondary-color: orange;
 $h1-size: 2.5rem;
 
 $bp-tablet: 768px;
-$desktop-bp: 960px;
+$bp-desktop: 960px;
 
 
 @mixin bp-tablet {
 
-	@media only screen and (min-width: $tablet-bp) {
+	@media only screen and (min-width: $bp-tablet) {
 		@content;
 		}
 
 }
 
-@mixin desktop-bp {
-		@media only screen and (min-width: $desktop-bp) {
+@mixin bp-desktop {
+		@media only screen and (min-width: $bp-desktop) {
 		@content;
 		}
 }
