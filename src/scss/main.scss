@@ -1,7 +1,7 @@
 /* 
 ==============================================
-CONTENT:	WebDev3-Final
-AUTHOR:		Danny McMillan
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
 ==============================================
 
 TABLE OF CONTENTS:
@@ -9,9 +9,6 @@ TABLE OF CONTENTS:
 0. Reset
 1. Main Layout
 2. Content
-3. Index Page
-4. Resource Page
-5. Work Page
 
 ==============================================
 */
@@ -48,11 +45,8 @@ a.active {
 
 
 
-/* 3. INDEX MOBILE ====================================== */
-.home-wrapper {
-	transition: all .4s ease-out;
+/* 3. INDEX MOBILE  ================================= */
 
-}
 .header {
 	display: flex;
 	flex-direction: column;
@@ -109,7 +103,7 @@ a.active {
 }
 
 
-.home-hero {
+.hero {
 	background-image: url("/dist/img/bg-index.jpg");
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
@@ -117,18 +111,18 @@ a.active {
     min-width: 300px;
     // height: 480px;
 
-    .home-hero-statement {
+    .hero-statement {
     	background-color: rgba(0, 0, 0, 0.6);
    
-    h1 {
+    h1, p {
     	color: white;
     	text-align: center;
-    	padding: 20px;
+    	padding: 50px;
     	font-size: 2rem;
     }
 
     p {
-    	text-align: center;
+    	margin-top: -100px;
     	color: red;
     	font-size: 60px;
     }
@@ -165,9 +159,6 @@ a.active {
 
 
 .space-stuff {
-	 img {
-	 	width: 90%;
-	 }
 
 	h2 {
 		font-size: 1.5rem;
@@ -184,11 +175,10 @@ a.active {
 	}
 	ul {
 		display: flex;
-		flex-direction: row;
-	}	
+		justify-content: center;	}
 
 	li {
-		margin: 10px;
+		padding: 20px;
 
 	}	
 
@@ -216,17 +206,10 @@ a.active {
 	.fun-facts {
 		display: flex;
 		margin: 10px;
-		text-align: center;
 	}
 	
 	.facts {
 		margin: 10px;
-
-	}
-
-	.space-img {
-		margin-top: 25px;
-		margin-bottom: 5px;
 
 	}
 
@@ -236,7 +219,6 @@ a.active {
 		text-align: center;
 		margin-bottom: 20px;
 		font-weight: bold;
-		border-bottom: 1px solid black;
 	}
 
 }
@@ -254,155 +236,7 @@ footer {
 	}
 }
 
-/* 3.1 Home tablet  ================================================ */
-
-.header {
-	@include bp-tablet {
-
-	ul {
-		padding: 10px;
-	}
-
-	}
-}
-
-.hero {
-
-	@include bp-tablet {
-
-		.about-me {
-			max-width: 80%;
-		}
-		.student-name {
-			width: 80%;
-
-			h2 {
-				width: 100%;
-			}
-		}
-	}
-}
-
-
-.space-stuff {
-	@include bp-tablet {
-		img {
-			width: 100%;
-			margin-left: 2px;
-
-		}
-	}
-}
-
-.space-wrapper {
-	@include bp-tablet {
-		display: flex;
-		
-	} 
-}
-
-
-.space-facts {
-	@include bp-tablet {
-		margin-top: 0px;
-		width: 150%;
-	}
-}
-
-
-.triangle {
-	@include bp-tablet {
-	margin-top: 60px;
-	width: 0;
-	height: 0;
-	border-bottom: 350px solid $secondary-color;
-	border-right: 350px solid transparent;
-	}
-}
-
-
-footer {
-	@include bp-tablet {
-		margin-top: 0px;
-	}
-}
-
-
-/* 3.2 Home Desktop  ================================================ */
-
-
-#home-wrapper {
-	@include bp-desktop {
-		width: 960px;
-		margin: auto;
-		background: gray;
-		border: 1px orange solid;
-	}
-}
-
-
-.header {
-	@include bp-desktop {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-
-	h1 {
-		margin: 20px;
-		padding: 20px;
-		border: 1px $secondary-color solid;
-	}
-
-	li {
-		margin: 10px;
-	}
-
-	ul {
-		background: black;
-		margin: 10px;
-		padding: 20px;
-	}
-	a {
-		color: white;
-		font-size: 1.5rem;
-	}
-
-	}
-
-}
-
-
-.space-info {
-	@include bp-desktop {
-		background: white;
-	}
-}
-
-
-.hero-statement {
-	@include bp-desktop {
-		width: 650px;
-
-
-		h1 {
-
-		}
-	}
-}
-
-
-.about-me-wrapper {
-	@include bp-desktop {
-		display: flex;
-	}
-}
-
-
-
-
-
-
-/* 4. RESOURCE PAGE  ================================================ */
+/* 3. RESOURCE PAGE  ================================= */
 
 .resource-hero {
 	background-image: url("/dist/img/bg-resource.jpg");
@@ -457,7 +291,7 @@ footer {
 		background: none;
 		color: white;
 		outline: none;
-		transition: all 3s ease-out;
+		// border: none;
 
 	}
 
@@ -465,7 +299,6 @@ footer {
 
 	.text-editors-menu.closed {
 		display: none;
-		transition: 1s ease-out;
 			
 	}
 
@@ -476,10 +309,11 @@ footer {
 		font-size: 1.5rem;
 		display: block;
 		background: red;
+		transition: all 2s ease;
 		height: 100%;
 		width: 100%;
 		padding: 20px;
-		transition: all 3s ease-out;
+		animation: ani-menu 2s linear infinite;
 
 		p {
 			padding: 10px;
@@ -492,101 +326,29 @@ footer {
 	}
 
 
+	@keyframes ani-menu {
+		from {
+			transform: translateY(100px);
+		}
 
-
-
-
-/* 5. WORK PAGE  ================================= */
-
-.work-hero {
-	background-image: url("/dist/img/bg-work.jpg");
-	background-repeat: no-repeat;
-	background-position: 20% 60%;
-	height: 320px;
-
-	h1 {
-		font-size: $h1-size;
-		text-align: center;
-		padding-top: 40px;
+		to {
+			transform: translateY(0px);	
+		}
 	}
 
-}
-
-
-.assignments {
-	background: gray;
-	opacity: .9;
-
-	h2 {
-		text-align: center;
-		padding: 10px;
-		border: 1px orange solid;
-	}
-
-	h3 {
-		text-align: center;
-		border-bottom: 1px solid black;
-		padding: 5px;
-		font-weight: bold;
-	}
-
-	p {
-		padding: 10px;
-	}
-}
-
-
-.about-me-info {
-	h2 {
-		text-align: center;
-	}
-
-}
-
-.about-me-wrapper {
-	display: flex;
-
-	.text-wrapper {
-		display: flex;
-		flex-direction: column;
-	}
-}
 
 
 
-/* 5.1 WORK PAGE-Tablet  ======================================== */
-
-
-.two-col-wrapper {
-	@include bp-tablet {
-		display: flex;
-		flex-direction: row;
-	}
-}
-
-.assignments {
-	@include bp-tablet {
-		width: 380px;
-	}
-}
-
-/* 6. ABOUT PAGE =============================================== */
 
 
 
-.about-hero {
-	background-image: url("/dist/img/bg-work.jpg");
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	max-width: 100%;
-    min-width: 300px;
-    height: 320px;
+/* 4. WORK PAGE  ================================= */
 
-    h1 {
-    	text-align: center;
-    	padding: 40px;
-    }
-}
+
+
+
+
+
 
 
 
