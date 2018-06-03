@@ -12,6 +12,7 @@ TABLE OF CONTENTS:
 3. Index Page
 4. Resource Page
 5. Work Page
+6. About Page
 
 ==============================================
 */
@@ -54,10 +55,7 @@ a.active {
 
 
 /* 3. INDEX MOBILE ====================================== */
-.home-wrapper {
-	transition: all .4s ease-out;
 
-}
 .header {
 	display: flex;
 	flex-direction: column;
@@ -336,7 +334,7 @@ footer {
 /* 3.2 Home Desktop  ================================================ */
 
 
-#home-wrapper {
+#wrapper {
 	@include bp-desktop {
 		width: 960px;
 		margin: auto;
@@ -396,9 +394,12 @@ footer {
 }
 
 
-.about-me-wrapper {
+.about-me-wrapper-home {
+
 	@include bp-desktop {
-		display: flex;
+	display: flex;
+	align-items: flex-end;
+
 	}
 }
 
@@ -415,6 +416,20 @@ footer {
 .space-stuff {
 	@include bp-desktop {
 		
+	}
+}
+
+.home-hero-statement {
+		@include bp-desktop {
+		position: relative;
+		width: 70%;
+		display: flex;
+		height: 120px;
+
+
+		p {
+			margin: 20px;	
+		}
 	}
 }
 
@@ -564,12 +579,27 @@ footer {
 
 }
 
-.about-me-wrapper {
-	display: flex;
+.about-me-wrapper-work {
+	margin-bottom: 10px;
+	text-align: center;
 
+	.work-img {
+		padding: 10px;
+	}
+
+	.bio {
+			padding: 10px;
+		}
+	
 	.text-wrapper {
-		display: flex;
-		flex-direction: column;
+
+		h4, p {
+		padding: 10px;
+
+		
+
+		}
+		
 	}
 }
 
@@ -590,6 +620,57 @@ footer {
 		width: 380px;
 	}
 }
+
+
+/* 5.2 WORK PAGE-DESKTOP  ======================================== */
+.two-col-wrapper-work {
+	@include bp-desktop {
+		display: flex;
+		justify-content: space-between;
+		margin-top: -85px;
+		padding: 20px;
+		z-index: 1;
+	}
+}
+
+
+.about-me-info {
+		@include bp-desktop {
+		width: 400px;
+		height: 300px;
+		background: white;
+
+		.work-img {
+				max-width: 150px;
+				display: block;
+			}
+
+			.bio {
+				padding: 0px;
+			}
+
+
+		.text-wrapper {
+			display: flex;
+			flex-direction: column;
+
+
+			h4, p {
+				padding: 0px;
+			}
+		}
+	}	
+}
+
+
+.assignments {
+	@include bp-desktop {
+		width: 500px;
+		background: white;
+		opacity: .4;
+	}
+}
+
 
 /* 6. ABOUT PAGE =============================================== */
 
